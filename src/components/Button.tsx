@@ -8,7 +8,7 @@ const Button: React.FC<ButtonProps> = ({ label }) => {
    return (
       <button
          onClick={() => {
-            window.alert('OWAO! You clicked that good!!!');
+            window.alert('OWAO! You clicked that hard!!!');
          }}
       >
          {label}
