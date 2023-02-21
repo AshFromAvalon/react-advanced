@@ -1,0 +1,47 @@
+{
+   "cancers": [
+      {
+         "label": "sein",
+         "molecules": [
+            {
+               "label": "Olaparib (LYNPARZA®)",
+               "classe": "Inhibiteur de PARP",
+               "indications": {
+                  "content": "En monothérapie ou en association à une hormonothérapie pour le traitement adjuvant des patients adultes atteints d’un cancer du sein précoce à haut risque HER2-négatif et présentant une mutation germinale des gènes BRCA1/2, qui ont été précédemment traités par chimiothérapie néo adjuvante ou adjuvante.",
+                  "code": "[COLAP04]",
+                  "dosage?": "Initiation à la fin de la radiothérapie (2 semaines après) au plus tard 12 semaines** après la fin du dernier traitement "
+               },
+               "status": {
+                  // check quels sont les différents status
+                  "isAuthorized": true,
+                  "label": "Accès précoce pré AMM (AP1)"
+               },
+               "authorizationTerms": {
+                  "chanel": "ONLINE",
+                  "platformUrl": "https://www.accesprecoce-lynparza-olympia.fr/"
+                  // "chanel": "EMAIL",
+                  // "email": "some@emailadress.com"
+               },
+               "put": {
+                  "label": "PUT Olaparib sein adj",
+                  "path": "path/file/todownload"
+               },
+               // "other": " Qu'est-ce qu'on trouve comme data ici ???"
+               "protocoles": [
+                  "PEMBROLIZUMAB (AAP) - PACLITAXEL hebdo (en J1=J21)",
+                  "PEMBROLIZUMAB (AAP) - GEMCITABINE - CARBOPLATINE hebdo AUC2",
+                  "PEMBROLIZUMAB 200mg (AAP)",
+                  "PEMBROLIZUMAB 400mg (AAP)"
+               ],
+               "others": [
+                  {
+                     "label": "string",
+                     "description": "string"
+                  }
+               ]
+               // Discuter la partie "rappels" et "A venir" => update fréquents ?
+            }
+         ]
+      }
+   ]
+}
