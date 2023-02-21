@@ -1,7 +1,8 @@
-import { createDraftSafeSelector, createSlice } from '@reduxjs/toolkit';
+import { createDraftSafeSelector, createSelector, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { Product } from 'core/interfaces/products';
 import { RootState } from 'store';
+import { getProducts } from 'services/productsApi';
 
 interface ProductSlice {
    products: Product[];
@@ -29,7 +30,10 @@ const productsSlice = createSlice({
 });
 
 export const { filterProducts, setProducts } = productsSlice.actions;
-
-export const selectProducts = (state: RootState) => state.products.products;
-
 export default productsSlice.reducer;
+
+const products = (state: RootState) => state.products.products;
+const id = (state: RootState, id = 0) => id;
+
+export const selectProducts = products;
+export const selectProductById = createSelector([products, id], (products, id) => products[id]);

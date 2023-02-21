@@ -1,4 +1,4 @@
-import { ShoppingCartSimple } from 'phosphor-react';
+import { Cart } from 'features/cart/Cart';
 
 export const Header = () => {
    return (
@@ -6,7 +6,7 @@ export const Header = () => {
          <nav className="max-w-[1224px] m-auto flex justify-between items-center h-full">
             <div>Logo here</div>
             <div>
-               <ShoppingCartSimple size={32} />
+               <Cart />
             </div>
          </nav>
       </header>
