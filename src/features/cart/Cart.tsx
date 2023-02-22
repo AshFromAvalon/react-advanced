@@ -20,7 +20,7 @@ export const Cart = () => {
             </div>
          )}
          <ShoppingCartSimple size={32} onClick={toggleCartView} className="cursor-pointer" />
-         {showCartView && <CartView />}
+         {showCartView && <CartView closeCartView={toggleCartView} />}
       </div>
    );
 };
