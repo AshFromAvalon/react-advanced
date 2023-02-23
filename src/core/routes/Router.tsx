@@ -9,6 +9,7 @@ import paths from 'core/routes/paths';
 const Home = lazy(() => import('pages/Home'));
 const Product = lazy(() => import('pages/Product'));
 const PageNotFound = lazy(() => import('pages/PageNotFound'));
+const Buy = lazy(() => import('pages/Buy'));
 
 interface BaseRoute {
    path: string;
@@ -32,6 +33,7 @@ const getRouteElement = (Component: React.ElementType): React.ReactNode => (
 const routes: Routes[] = [
    { path: paths.HOME, element: getRouteElement(Home) },
    { path: `${paths.PRODUCT}/:id`, element: getRouteElement(Product) },
+   { path: paths.BUY, element: getRouteElement(Buy) },
    { path: paths.NOT_FOUND, element: getRouteElement(PageNotFound) },
 ];
 

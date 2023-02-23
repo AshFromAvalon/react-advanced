@@ -20,7 +20,7 @@ const ProductCard = ({ id, name, price, description, imageUrl }: ProductCardProp
    };
 
    return (
-      <div className="text-sm p-4 shadow-md">
+      <div className="text-sm p-4 shadow-md product-card">
          <div className="flex mb-2 ">
             <img className="mr-4 h-[100px] w-[100px]" src={imageUrl} />
             <div className="flex flex-1 flex-col justify-between">

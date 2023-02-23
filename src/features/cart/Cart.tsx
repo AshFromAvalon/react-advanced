@@ -15,12 +15,15 @@ export const Cart = () => {
    return (
       <div className="relative ">
          {!!total && (
-            <div className="rounded-full bg-white text-teal-500 h-6 w-6 flex justify-center items-center absolute left-[18px] bottom-[18px]">
+            <div
+               id="cartNumber"
+               className="rounded-full bg-white text-teal-500 h-6 w-6 flex justify-center items-center absolute left-[18px] bottom-[18px]"
+            >
                {total}
             </div>
          )}
          <ShoppingCartSimple size={32} onClick={toggleCartView} className="cursor-pointer" />
-         {showCartView && <CartView />}
+         {showCartView && <CartView closeCartView={toggleCartView} />}
       </div>
    );
 };
